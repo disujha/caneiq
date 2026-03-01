@@ -428,9 +428,9 @@ This project is proprietary software. All rights reserved.
 ## 📞 Support
 
 For technical support and inquiries:
-- Email: support@caneiq.com
-- Documentation: [docs.caneiq.com](https://docs.caneiq.com)
-- Issues: [GitHub Issues](https://github.com/caneiq/platform/issues)
+- Email: support@rethela.com
+- Documentation: Coming soon
+- Issues: [GitHub Issues](https://github.com/disujha/caneiq/issues)
 
 ## 🗺️ Roadmap
 
