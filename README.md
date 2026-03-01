@@ -434,15 +434,15 @@ For technical support and inquiries:
 
 ## 🗺️ Roadmap
 
-### Version 2.0 (Q2 2024)
-- [ ] Firebase Firestore integration
+### Version 2.0 (Q2 2026)
+- [x] Firebase Firestore integration
 - [ ] Advanced ML models
 - [ ] Mobile application
 - [ ] Multi-mill support
 
-### Version 3.0 (Q3 2024)
+### Version 3.0 (Q3 2026)
 - [ ] Predictive analytics
-- [ ] Automated calibration
+- [x] Automated calibration
 - [ ] Edge device deployment
 - [ ] Advanced reporting
 
