@@ -71,7 +71,7 @@ export default function Dashboard() {
     // Fetch initial data including calibration
     const fetchData = async () => {
       try {
-        // Fetch latest calibration
+        // Try to fetch latest calibration from backend
         const calibrationResponse = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001'}/api/calibration/latest`)
         let lastCalibration = null
         if (calibrationResponse.ok) {
@@ -103,7 +103,7 @@ export default function Dashboard() {
   }, [])
 
   const handleCalibrationComplete = async (calibrationData: CalibrationData) => {
-    // Store calibration in Firebase (mock implementation for now)
+    // Store calibration in backend (with fallback)
     try {
       const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001'}/api/calibration`, {
         method: 'POST',
@@ -116,9 +116,15 @@ export default function Dashboard() {
       if (response.ok) {
         // Update local state with new calibration
         setData(prev => prev ? { ...prev, lastCalibration: calibrationData } : null)
+      } else {
+        // Still update local state even if backend fails
+        setData(prev => prev ? { ...prev, lastCalibration: calibrationData } : null)
+        console.warn('Backend not available, calibration saved locally only')
       }
     } catch (error) {
       console.error('Failed to save calibration:', error)
+      // Still update local state for demo purposes
+      setData(prev => prev ? { ...prev, lastCalibration: calibrationData } : null)
       throw error
     }
   }
