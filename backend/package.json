@@ -1,0 +1,1 @@
+{"name":"caneiq-backend","version":"1.0.0","description":"CaneIQ Backend API","main":"src/index.js","scripts":{"dev":"node src/index.js","start":"node src/index.js","test":"echo \"Error: no test specified\" && exit 1"},"dependencies":{"express":"^4.18.0","cors":"^2.8.5","dotenv":"^16.0.0","firebase-admin":"^11.0.0"},"engines":{"node":">=18.0.0"}}
